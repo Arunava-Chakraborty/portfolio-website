@@ -146,7 +146,7 @@ def header_section():
     with col1:
         st.markdown('<div class="image-container">', unsafe_allow_html=True)
         st.image(
-            "https://github.com/Arunava-Chakraborty/portfolio-website/blob/main/view-3d-man-holding-laptop-removebg.png",
+            "https://raw.githubusercontent.com/Arunava-Chakraborty/portfolio-website/main/view-3d-man-holding-laptop-removebg.png",
             caption="Crafting Solutions, One Line of Code at a Time.",
             use_container_width=True,
         )
