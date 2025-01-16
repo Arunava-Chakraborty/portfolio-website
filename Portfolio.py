@@ -7,7 +7,7 @@ from pathlib import Path
 
 # Set up the main structure of the portfolio
 st.set_page_config(page_title="My Portfolio", layout="wide")
-
+'''''
 # Sidebar for navigation
 def styled_sidebar():
     # Add custom CSS for styling the sidebar
@@ -72,7 +72,7 @@ def styled_sidebar():
     return clicked_button or "Home"  # Default to Home if no button is clicked
 
 
-
+'''
 # Header Section with manual animation
 def animated_text(lines, speed=0.05):
     placeholder = st.empty()
