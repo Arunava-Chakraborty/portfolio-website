@@ -350,7 +350,7 @@ def contact_section():
             st.write("No messages received yet.")
 
 # Render selected section
-
+'''''
 choice = styled_sidebar()
 if choice == "Home":
     header_section()
@@ -363,3 +363,4 @@ elif choice == "Contact":
 
 # Footer
 st.markdown("---")
+'''
