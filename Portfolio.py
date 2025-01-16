@@ -225,14 +225,14 @@ def projects_section():
     st.write("Here are some highlights of my work:")
 
     projects = [
-        {"title": "E-commerce Chatbot", "description": "An interactive chatbot capable of negotiating prices for e-commerce platforms.", "link": "https://github.com/your-repo/chatbot", "image_url": "C:/Users/Arunava/Desktop/Portfolio Website/thumbnails.png"},
-        {"title": "Web Traffic Forecasting", "description": "A machine learning model to predict and optimize web traffic trends and forecast about it.", "link": "https://github.com/your-repo/web-traffic", "image_url": "C:/Users/Arunava/Desktop/Portfolio Website/thumbnails.png"},
-        {"title": "Portfolio Website- Data#Arunava", "description": "This very portfolio built with Python and Streamlit! dive down in my projects and interests", "link": "https://github.com/your-repo/portfolio", "image_url": "C:/Users/Arunava/Desktop/Portfolio Website/thumbnails.png"},
-        {"title": "Media Sentiment Analysis", "description": "Analyze social media data for sentiment insights and give feedback and predictions.", "link": "https://github.com/your-repo/social-sentiment", "image_url": "C:/Users/Arunava/Desktop/Portfolio Website/thumbnails.png"},
-        {"title": "Stock Price Prediction", "description": "Machine learning model to predict stock prices.", "link": "https://github.com/your-repo/stock-prediction", "image_url": "C:/Users/Arunava/Desktop/Portfolio Website/thumbnails.png"},
-        {"title": "Personal Finance Dashboard", "description": "A dashboard to visualize and manage personal finances.", "link": "https://github.com/your-repo/finance-dashboard", "image_url": "C:/Users/Arunava/Desktop/Portfolio Website/thumbnails.png"},
-        {"title": "Image Classifier Model", "description": "An image classification model using CNN.", "link": "https://github.com/your-repo/image-classifier", "image_url": "C:/Users/Arunava/Desktop/Portfolio Website/thumbnails.png"},
-        {"title": "Recommendation System", "description": "A recommendation system for e-commerce platforms.", "link": "https://github.com/your-repo/recommendation", "image_url": "C:/Users/Arunava/Desktop/Portfolio Website/thumbnails.png"}
+        {"title": "E-commerce Chatbot", "description": "An interactive chatbot capable of negotiating prices for e-commerce platforms.", "link": "https://github.com/your-repo/chatbot", "image_url": "https://github.com/Arunava-Chakraborty/portfolio-website/blob/main/thumbnails.png"},
+        {"title": "Web Traffic Forecasting", "description": "A machine learning model to predict and optimize web traffic trends and forecast about it.", "link": "https://github.com/your-repo/web-traffic", "image_url": "https://github.com/Arunava-Chakraborty/portfolio-website/blob/main/thumbnails.png"},
+        {"title": "Portfolio Website- Data#Arunava", "description": "This very portfolio built with Python and Streamlit! dive down in my projects and interests", "link": "https://github.com/your-repo/portfolio", "image_url": "https://github.com/Arunava-Chakraborty/portfolio-website/blob/main/thumbnails.png"},
+        {"title": "Media Sentiment Analysis", "description": "Analyze social media data for sentiment insights and give feedback and predictions.", "link": "https://github.com/your-repo/social-sentiment", "image_url": "https://github.com/Arunava-Chakraborty/portfolio-website/blob/main/thumbnails.png"},
+        {"title": "Stock Price Prediction", "description": "Machine learning model to predict stock prices.", "link": "https://github.com/your-repo/stock-prediction", "image_url": "https://github.com/Arunava-Chakraborty/portfolio-website/blob/main/thumbnails.png"},
+        {"title": "Personal Finance Dashboard", "description": "A dashboard to visualize and manage personal finances.", "link": "https://github.com/your-repo/finance-dashboard", "image_url": "https://github.com/Arunava-Chakraborty/portfolio-website/blob/main/thumbnails.png"},
+        {"title": "Image Classifier Model", "description": "An image classification model using CNN.", "link": "https://github.com/your-repo/image-classifier", "image_url": "https://github.com/Arunava-Chakraborty/portfolio-website/blob/main/thumbnails.png"},
+        {"title": "Recommendation System", "description": "A recommendation system for e-commerce platforms.", "link": "https://github.com/your-repo/recommendation", "image_url": "https://github.com/Arunava-Chakraborty/portfolio-website/blob/main/thumbnails.png"}
     ]
 
     rows = len(projects) // 4 + (1 if len(projects) % 4 != 0 else 0)
