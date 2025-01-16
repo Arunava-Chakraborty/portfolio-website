@@ -10,17 +10,21 @@ st.set_page_config(page_title="My Portfolio", layout="wide")
 
 # Sidebar for navigation
 def styled_sidebar():
-    # Add custom CSS for styling the sidebar
     st.markdown(
         """
         <style>
-        /* Sidebar styling */
         .sidebar .sidebar-content {
             background: linear-gradient(135deg, #1a1a1a, #333);
             color: white;
             padding: 15px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            z-index: 1000;
+            overflow: auto;
         }
         .sidebar-title {
             font-size: 1.8rem;
@@ -48,30 +52,78 @@ def styled_sidebar():
             background: #0073e6;
             color: white;
         }
+        .sidebar-toggle {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #444;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1100;
+            cursor: pointer;
+        }
+        .sidebar-toggle:hover {
+            background: #f39c12;
+        }
+        @media (max-width: 768px) {
+            .sidebar .sidebar-content {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            .sidebar.show {
+                transform: translateX(0);
+            }
+            .sidebar-toggle {
+                display: block;
+            }
+        }
         </style>
         """,
         unsafe_allow_html=True,
     )
 
-    # Sidebar container
+    # Toggle button for mobile devices
+    st.markdown(
+        """
+        <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+        <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar .sidebar-content');
+            sidebar.classList.toggle('show');
+        }
+        </script>
+        """,
+        unsafe_allow_html=True,
+    )
+
     st.sidebar.markdown('<div class="sidebar">', unsafe_allow_html=True)
     st.sidebar.markdown('<div class="sidebar-content">', unsafe_allow_html=True)
     st.sidebar.markdown('<div class="sidebar-title">Navigation</div>', unsafe_allow_html=True)
 
     # Navigation options
     options = ["Home", "Blogs & Research Paper", "Projects", "Contact"]
-
-    # Handle button clicks
-    clicked_button = None
-    for option in options:
-        if st.sidebar.button(option):
-            clicked_button = option
+    clicked_button = st.sidebar.radio("Navigate", options, index=0)
 
     st.sidebar.markdown('</div></div>', unsafe_allow_html=True)
+    return clicked_button
 
-    return clicked_button or "Home"  # Default to Home if no button is clicked
+# Add anchors for scrolling navigation
+def scroll_to_section(section_id):
+    st.markdown(
+        f"""
+        <script>
+        document.getElementById("{section_id}").scrollIntoView({{
+            behavior: "smooth"
+        }});
+        </script>
+        """,
+        unsafe_allow_html=True,
+    ) # Default to Home if no button is clicked
 
-''''''
+
 
 # Header Section with manual animation
 def animated_text(lines, speed=0.05):
@@ -86,6 +138,7 @@ def header_section():
     # Add a gradient background with styling
     
     # Add CSS for floating animation and overall styling
+    st.markdown('<div id="home"></div>', unsafe_allow_html=True)
     st.markdown(
         """
         <style>
@@ -184,6 +237,7 @@ def header_section():
 # About Me Section
 def about_section():
     st.header("Blogs & Research Papers")
+    st.markdown('<div id="blogs"></div>', unsafe_allow_html=True)
     st.write(
         """Hello! I'm Arunava Chakraborty , a passionate software developer and data enthusiast with a knack for solving complex challenges. 
         My expertise lies in [specific skills or tools, e.g., Python, Machine Learning, Full-Stack Development], and I love working on 
@@ -221,6 +275,7 @@ def about_section():
 
 # Projects Section
 def projects_section():
+    st.markdown('<div id="projects"></div>', unsafe_allow_html=True)
     st.header("My Projects")
     st.write("Here are some highlights of my work:")
 
@@ -267,8 +322,7 @@ def projects_section():
 # Contact Section
 def contact_section():
     st.header("Get in Touch")
-    
-
+    st.markdown('<div id="contact"></div>', unsafe_allow_html=True)
     # Display contact information as a footer
     st.markdown(
         """
