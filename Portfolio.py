@@ -239,11 +239,11 @@ def about_section():
     st.header("Blogs & Research Papers")
     st.markdown('<div id="blogs"></div>', unsafe_allow_html=True)
     st.write(
-        """Hello! I'm Arunava Chakraborty , a passionate software developer and data enthusiast with a knack for solving complex challenges. 
-        My expertise lies in [specific skills or tools, e.g., Python, Machine Learning, Full-Stack Development], and I love working on 
-        projects that make a difference.
+        """A passionate software developer and data enthusiast with a knack for solving complex challenges. 
+        My expertise lies in  Python,Data Analysis, Data Science, Machine Learning, and I love working on 
+        projects that make a difference and of-course involves Data .
         
-        When I'm not coding, you can find me exploring new technologies, writing blogs, or enjoying [hobby, e.g., photography]."""
+        When I'm not coding, you can find me exploring new technologies, writing blogs, or doing photography , gaming etc etc."""
     )
     
     Blogs = [
@@ -417,6 +417,3 @@ elif choice == "Contact":
 
 # Footer
 st.markdown("---")
-
-
-
